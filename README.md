@@ -4,7 +4,9 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/iKislay/giteye?style=social)](https://github.com/iKislay/giteye)
 
-> **GitEye** is a powerful and comprehensive GitHub API key scanner that helps security researchers, developers, and organizations discover leaked API keys across multiple AI services on GitHub.
+> **GitEye** is a powerful and comprehensive Leaked API key scanner that helps security researchers, developers, and organizations discover leaked API keys across multiple AI services on GitHub.
+
+If GitEye has been helpful in your security research or development work, please consider giving it a star! ⭐
 
 ## 🌟 Features
 
@@ -128,16 +130,6 @@ We welcome contributions! Here's how you can help:
 - Add type hints where appropriate
 - Include docstrings for functions and classes
 - Use meaningful variable and function names
-
-## ⭐ Star This Project
-
-If GitEye has been helpful in your security research or development work, please consider giving it a star! ⭐
-
-**Why star this project?**
-- 🌟 **Support Development**: Stars help motivate continued development
-- 🔍 **Discoverability**: More stars = more visibility = more contributors
-- 🛡️ **Security Community**: Help build a stronger security research community
-- 📈 **Feature Requests**: Higher visibility helps prioritize new features
 
 ## 📄 License
 

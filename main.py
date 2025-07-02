@@ -51,15 +51,15 @@ def main():
         headless = headless_input == "y"
 
     if choice == "1":
-        anthropic_main()
+        anthropic_main(headless=headless)
     elif choice == "2":
-        openai_main()
+        openai_main(headless=headless)
     elif choice == "3":
-        xai_api_main()
+        xai_api_main(headless=headless)
     elif choice == "4":
-        t1 = threading.Thread(target=anthropic_main, kwargs={"headless": headless})
-        t2 = threading.Thread(target=openai_main, kwargs={"headless": headless})
-        t3 = threading.Thread(target=xai_api_main, kwargs={"headless": headless})
+        t1 = threading.Thread(target=anthropic_main, args=(), kwargs={"headless": headless})
+        t2 = threading.Thread(target=openai_main, args=(), kwargs={"headless": headless})
+        t3 = threading.Thread(target=xai_api_main, args=(), kwargs={"headless": headless})
         t1.start()
         t2.start()
         t3.start()

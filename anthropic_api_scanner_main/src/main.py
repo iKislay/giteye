@@ -20,7 +20,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from tqdm import tqdm
 
-from .configs import KEYWORDS, LANGUAGES, PATHS, REGEX_LIST
+# Import configs using relative import
+from . import configs
+KEYWORDS = configs.KEYWORDS
+LANGUAGES = configs.LANGUAGES
+PATHS = configs.PATHS
+REGEX_LIST = configs.REGEX_LIST
+
 from core.managers import ProgressManager, CookieManager, DatabaseManager
 from core.key_checker import check_key
 
@@ -307,7 +313,7 @@ def main(from_iter: int | None = None, check_existed_keys_only: bool = False, ke
     keywords = KEYWORDS.copy() if keywords is None else keywords
     languages = LANGUAGES.copy() if languages is None else languages
 
-    leakage = APIKeyLeakageScanner("anthropic_github.db", keywords, languages, headless)
+    leakage = APIKeyLeakageScanner("anthropic_db.db", keywords, languages, headless)
     leakage.headless = headless
 
     try:

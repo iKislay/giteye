@@ -20,7 +20,13 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from tqdm import tqdm
 
-from .configs import KEYWORDS, LANGUAGES, PATHS, REGEX_LIST
+# Import configs using relative import
+from . import configs
+KEYWORDS = configs.KEYWORDS
+LANGUAGES = configs.LANGUAGES
+PATHS = configs.PATHS
+REGEX_LIST = configs.REGEX_LIST
+
 from core.managers import ProgressManager, CookieManager, DatabaseManager
 from core.key_checker import check_key
 from openai import OpenAI, APIStatusError, AuthenticationError, RateLimitError
